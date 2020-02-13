@@ -6,7 +6,7 @@
 
 class Game {
   public:
-    Game() : ship {Ship {288, 208}}, isRunning {true} {};
+    Game() : ship {Ship {288, 208, 640, 480}}, isRunning {true} {};
 
     // Initialize the game
     bool initialize();

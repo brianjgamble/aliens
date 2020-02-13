@@ -8,7 +8,9 @@ class Ship {
         int y;
     };
 
-    Ship(int initialX, int initialY) : pos {Position {initialX, initialY}} {};
+    Ship(int initialX, int initialY, int largestX, int largestY)
+        : pos {Position {initialX, initialY}}, upperX {largestX - SIZE},
+          upperY {largestY - SIZE} {};
 
     void moveUp();
     void moveDown();
@@ -19,8 +21,11 @@ class Ship {
     [[nodiscard]] int getY() const;
 
   private:
-    Position pos;
     const int INCREMENT = 5;
+    const int SIZE      = 64;
+    Position pos;
+    int upperX;
+    int upperY;
 };
 
 #endif
