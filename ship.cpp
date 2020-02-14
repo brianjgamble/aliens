@@ -31,3 +31,6 @@ int Ship::getX() const {
 int Ship::getY() const {
     return pos.y;
 }
+int Ship::getSize() const {
+    return SIZE;
+}

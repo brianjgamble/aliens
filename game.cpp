@@ -24,8 +24,14 @@ bool Game::initialize() {
         return false;
     }
 
-    SDL_Surface* image = SDL_LoadBMP("spaceship.bmp");
-    texture            = SDL_CreateTextureFromSurface(renderer, image);
+    SDL_Surface* image = SDL_LoadBMP("alien-blue.bmp");
+
+    if (!image) {
+        SDL_Log("Failed to load alien bitmap: %s", SDL_GetError());
+        return false;
+    }
+
+    texture = SDL_CreateTextureFromSurface(renderer, image);
 
     SDL_FreeSurface(image);
 
@@ -90,7 +96,7 @@ void Game::processInput() {
 }
 
 void Game::generateOutput() {
-    SDL_Rect rect = {ship.getX(), ship.getY(), 64, 64};
+    SDL_Rect rect = {ship.getX(), ship.getY(), ship.getSize(), ship.getSize()};
 
     SDL_RenderClear(renderer);
     SDL_RenderCopy(renderer, texture, nullptr, &rect);

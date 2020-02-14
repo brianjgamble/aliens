@@ -20,9 +20,12 @@ class Ship {
     [[nodiscard]] int getX() const;
     [[nodiscard]] int getY() const;
 
+    [[nodiscard]] int getSize() const;
+
   private:
     const int INCREMENT = 5;
-    const int SIZE      = 64;
+    const int SIZE      = 37;
+
     Position pos;
     int upperX;
     int upperY;
