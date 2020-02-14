@@ -24,6 +24,6 @@ The `CMAKE_MOODULE_PATH` is the path to the directory that contains the file
 
 ## Running
 
-In the build directory, run the program `aliens`.  You can use the arrow 
-keys to move the ship around the screen.  Pressing `Esc` or closing the 
+In the build directory, run the program `aliens`.  You can use WASD and the 
+arrow keys to move the ship around the screen.  Pressing `Esc` or closing the 
 window will exit the program.
