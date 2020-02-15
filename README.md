@@ -14,12 +14,12 @@ The original art for the alien ship is found on OpenGameArt.Org: [Simple Alien S
 ```shell script
 mkdir -p build
 cd build
-cmake -D CMAKE_MODULE_PATH==~/local/lib/cmake/SDL2 ..
+cmake -D SDL_CMAKE_PATH==~/local/lib/cmake/SDL2 ..
 cmake --build .
 cp ../alien-blue.bmp .
 ```
 
-The `CMAKE_MOODULE_PATH` is the path to the directory that contains the file 
+The `SDL_CMAKE_PATH` is the path to the directory that contains the file 
 `sdl2-config.cmake`.  It is created when you build the SDL2 library.
 
 ## Running
