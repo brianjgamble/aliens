@@ -1,5 +1,7 @@
 #include "game.h"
 
+const int MS_PER_FRAME = 16;
+
 bool Game::initialize() {
     auto sdlResult = SDL_Init(SDL_INIT_VIDEO);
 
