@@ -4,6 +4,8 @@
 #include "ship.h"
 #include <SDL.h>
 
+const int MS_PER_FRAME = 16;
+
 class Game {
   public:
     Game() : ship {Ship {288, 208, 640, 480}}, isRunning {true} {};

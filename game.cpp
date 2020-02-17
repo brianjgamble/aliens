@@ -41,8 +41,16 @@ bool Game::initialize() {
 
 void Game::runLoop() {
     while (isRunning) {
+        auto current = SDL_GetTicks();
+
         processInput();
         generateOutput();
+
+        auto elapsed = SDL_GetTicks() - current;
+
+        if (MS_PER_FRAME > elapsed) {
+            SDL_Delay(MS_PER_FRAME - elapsed);
+        }
     }
 }
 
